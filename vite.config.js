@@ -1,9 +1,15 @@
 import { defineConfig } from 'vite'
+import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      src: fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
   plugins: [
     vue({ template: { transformAssetUrls } }),
     quasar({ sassVariables: 'src/quasar-variables.sass' }),
