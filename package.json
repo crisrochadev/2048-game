@@ -17,6 +17,8 @@
     "@quasar/vite-plugin": "^1.7.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "vite": "^5.4.10",
-    "vite-plugin-pwa": "^0.20.5"
+    "vite-plugin-pwa": "^0.20.5",
+    "sass-embedded": "^1.93.3"
+
   }
 }
